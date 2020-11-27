@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
+<html lang="en-us" style="background: red; padding:0px; margin:0px;">
+  <!-- <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Choices 2050</title>
-  </head>
-  <body style="text-align: center">
-    <canvas id="unity-canvas" style="width: 1600px; height: 1200px; background: #231F20"></canvas>
+  </head> -->
+  <!-- <body style="text-align: center"> -->
+    <canvas id="unity-canvas" style="position:absolute; top:-25%;left:0px; width: 100%; height: 150%; background: #000000"></canvas>
     <script src="Build/Choices2050.loader.js"></script>
     <script>
+     
       createUnityInstance(document.querySelector("#unity-canvas"), {
         dataUrl: "Build/Choices2050.data",
         frameworkUrl: "Build/Choices2050.framework.js",
@@ -18,6 +19,8 @@
         productName: "Choices 2050",
         productVersion: "0.1",
       });
+
     </script>
-  </body>
+
+  <!-- </body> -->
 </html>
