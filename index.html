@@ -4,12 +4,20 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Choices 2050</title>
-    <script src="Build/UnityLoader.js"></script>
-    <script>
-      UnityLoader.instantiate("unityContainer", "Build/Choices_2050_Beta2.json");
-    </script>
   </head>
-  <body>
-    <div id="unityContainer" style="width: 1600px; height: 1200px; margin: auto; zoom:50%"></div>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" style="width: 1600px; height: 1200px; background: #231F20"></canvas>
+    <script src="Build/Choices_2050_Beta2.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/Choices_2050_Beta2.data.gz",
+        frameworkUrl: "Build/Choices_2050_Beta2.framework.js.gz",
+        codeUrl: "Build/Choices_2050_Beta2.wasm.gz",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "HankPortney",
+        productName: "Choices 2050",
+        productVersion: "0.1",
+      });
+    </script>
   </body>
 </html>
